@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "C13 Shoot - Captura de Pantalla Completa y Grabador Pro",
+  "version": "1.0.0",
+  "description": "C13 Shoot: Captura páginas completas con auto-scroll, selecciona áreas, anota y graba pantalla en 4K. 100% gratis y Open Source.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting",
+    "storage",
+    "unlimitedStorage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "C13 Shoot",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "commands": {
+    "capture-visible": {
+      "suggested_key": {
+        "default": "Alt+Shift+V"
+      },
+      "description": "Capturar parte visible"
+    },
+    "capture-area": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      },
+      "description": "Capturar área seleccionada"
+    },
+    "capture-fullpage": {
+      "suggested_key": {
+        "default": "Alt+Shift+F"
+      },
+      "description": "Capturar página completa"
+    }
+  }
+}

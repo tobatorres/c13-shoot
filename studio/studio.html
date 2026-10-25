@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C13 Shoot — Estudio de Edición Pro</title>
+  <link rel="stylesheet" href="studio.css" />
+</head>
+<body>
+  <header class="studio-topbar">
+    <div class="brand-left">
+      <div class="logo-icon">📸</div>
+      <div>
+        <input id="doc-title" type="text" class="title-input" value="c13-shoot-captura" title="Renombrar archivo" />
+        <span id="img-dimensions" class="dim-badge">0 × 0 px</span>
+      </div>
+    </div>
+
+    <!-- Barra de herramientas central -->
+    <div class="toolbar" id="annotation-toolbar">
+      <button class="tool-btn active" data-tool="arrow" title="Flecha">
+        ↗️ <span>Flecha</span>
+      </button>
+      <button class="tool-btn" data-tool="rect" title="Rectángulo">
+        ⬜ <span>Cuadro</span>
+      </button>
+      <button class="tool-btn" data-tool="ellipse" title="Círculo / Elipse">
+        ⭕ <span>Círculo</span>
+      </button>
+      <button class="tool-btn" data-tool="pen" title="Dibujo libre">
+        ✏️ <span>Lápiz</span>
+      </button>
+      <button class="tool-btn" data-tool="highlighter" title="Subrayador fluorescente">
+        🖍️ <span>Resaltar</span>
+      </button>
+      <button class="tool-btn" data-tool="text" title="Añadir texto">
+        🔤 <span>Texto</span>
+      </button>
+      <button class="tool-btn" data-tool="step" title="Pasos numerados (1, 2, 3...)">
+        🔢 <span>Pasos</span>
+      </button>
+      <button class="tool-btn" data-tool="blur" title="Pixelar / Ocultar datos privados">
+        🕶️ <span>Difuminar</span>
+      </button>
+      <button class="tool-btn" data-tool="crop" title="Recortar imagen">
+        ✂️ <span>Recortar</span>
+      </button>
+
+      <div class="divider"></div>
+
+      <input type="color" id="stroke-color" value="#ef4444" title="Color de herramienta" />
+      <select id="stroke-size" class="tool-select" title="Grosor / Tamaño">
+        <option value="2">Fino (2px)</option>
+        <option value="4" selected>Medio (4px)</option>
+        <option value="8">Grueso (8px)</option>
+        <option value="14">Extra (14px)</option>
+      </select>
+
+      <div class="divider"></div>
+
+      <button id="btn-beautify" class="action-btn" title="Añadir fondo degradado tipo presentación">
+        ✨ Marco Pro
+      </button>
+      <button id="btn-undo" class="action-btn" title="Deshacer (Ctrl+Z)">
+        ↩️ Deshacer
+      </button>
+      <button id="btn-clear" class="action-btn" title="Restaurar captura original">
+        🗑️ Limpiar
+      </button>
+    </div>
+
+    <!-- Botones de exportación (100% Pro desbloqueados) -->
+    <div class="export-bar">
+      <button id="btn-copy" class="export-btn secondary">📋 Copiar</button>
+      <button id="btn-download-png" class="export-btn primary">⬇️ PNG</button>
+      <button id="btn-download-pdf" class="export-btn emerald">📄 PDF Pro</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <div class="canvas-container" id="canvas-wrapper">
+      <canvas id="editor-canvas"></canvas>
+    </div>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="studio.js"></script>
+</body>
+</html>

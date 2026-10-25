@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C13 Shoot — Grabador de Pantalla Pro</title>
+  <link rel="stylesheet" href="recorder.css" />
+</head>
+<body>
+  <div class="rec-shell">
+    <header class="rec-header">
+      <div class="brand">
+        <span class="badge-live" id="rec-state-badge">LISTO PARA GRABAR</span>
+        <h1>C13 Shoot Video Studio <span class="pro-tag">4K PRO</span></h1>
+      </div>
+      <div class="timer" id="rec-timer">00:00:00</div>
+    </header>
+
+    <main class="preview-stage">
+      <video id="live-preview" autoplay muted playsinline></video>
+      <div id="countdown-overlay" class="countdown hidden">3</div>
+    </main>
+
+    <footer class="controls-bar">
+      <button id="btn-start" class="ctrl-btn start">🔴 Iniciar Grabación</button>
+      <button id="btn-pause" class="ctrl-btn pause" disabled>⏸️ Pausar</button>
+      <button id="btn-pip-cam" class="ctrl-btn cam">📷 Activar Cámara Flotante (PiP)</button>
+      <button id="btn-stop" class="ctrl-btn stop" disabled>⏹️ Finalizar y Guardar</button>
+      <button id="btn-download-video" class="ctrl-btn download hidden">⬇️ Descargar Grabación</button>
+    </footer>
+  </div>
+
+  <!-- Vídeo oculto para Picture-in-Picture de la webcam -->
+  <video id="webcam-pip" autoplay muted playsinline style="width:1px;height:1px;opacity:0;position:fixed;pointer-events:none;"></video>
+  <script src="recorder.js"></script>
+</body>
+</html>
