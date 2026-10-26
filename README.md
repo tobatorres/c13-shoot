@@ -75,3 +75,8 @@ c13-shoot/
 
 ## 📄 Licencia
 Distribuido bajo licencia **MIT**. Libre para usar, estudiar, mejorar y compartir.
+
+
+---
+### ⚡ Desarrollo e Innovación
+Proyecto concebido y desarrollado por **Toba Torres (Creaciones13)** mediante desarrollo asistido de última generación con **Google Antigravity & Gemini**.
